@@ -16,7 +16,7 @@
 
 .navbar-nav li{
                 margin-top: 10px;
-                padding-left: 30px;
+                padding-left: 20px;
                 color: black;
                 left: 0;
         
@@ -43,7 +43,7 @@ a{
 
  .navbar{
             position: fixed;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             background-image: url(../data/logo.jpg);
             background-repeat: no-repeat;
             background-position-x:120%;
@@ -73,16 +73,20 @@ a{
 }
 
 .dropdown-menu li{
-    direction: rtl;
             top:30px;
         }
 .navbar-expand-lg .navbar-nav .dropdown-menu{
-    position:absolute;
-    left: -180px;
-    width:500px;
-  margin-left: 0;
-
-    
+    position:relative;
+    top: 10px;
+    left:-40px;
+    width:100vw;
+    border-style: none;    
+}
+.dropdown-menu .row{
+    display: grid;
+    grid-template-columns: repeat(5,70px);
+    width:100vw;
+    left: -60px;
 }
 
 .breadcrumb{
@@ -92,8 +96,8 @@ a{
 }
 .first{
             margin-top: 160px;
+            margin-bottom: 80px;
             padding-top: 20px;
-            height: 900px;
         }
 .first h3{
             margin-top: 30px;
@@ -113,11 +117,12 @@ a{
 .first .btn{
             background-color: black;
             color: white;
-            position: absolute;
-            left: 175px;
+            position: relative;
+            left: 200px;
+            margin-bottom: 30px;
 }
-.first img{
-            width: 350px;
+#fimg{
+            width: 300px;
             height: 300px;
 }
 .sideimg img{
@@ -132,66 +137,84 @@ a{
         background-color: black;
         color: white;
 }
-.secand-section{
-        margin-top: -200px;
-    }
 
-
-.carousel{
-        margin-left: 200px;
-        margin-top: 40px;
+.desc{
+margin-bottom: 30px;
 }
-.carousel-control-prev{
-        position: absolute;
-        left:-150px;
+
+
+/* .carousel-control-prev{
+        position: relative;
 }
 .carousel-control-next{
-            position: absolute;
-            right:10px;
-}
-.carousel-control-prev-icon{
-    background-color: black;
-    color: red;
+            position: relative;
+          
+} */
 
-}
-.carousel-control-next-icon{
+.carousel-control-next-icon ,.carousel-control-prev-icon{
     background-color: black;
 
 }
-.card p{
-    padding-top: 10px;
-    margin-bottom: 40px;
+@media (max-width: 768px) {
+    .carousel-control-next-icon ,.carousel-control-prev-icon{
+        background-color: blue;
+    }
+    .carousel-control-next-icon {
+        margin-left: 475px;}
+        .carousel-control-prev-icon {
+            margin-left: -150px;}
+}
+
+.card .btn{
+    position: relative;
+    left: 0;
 }
 .card{
     width: 20rem;
-    margin-left:10px ;
     border-style: none;
+    display: inline-flex;
 }
+@media (max-width: 768px) {
+    .cards{
+        width: 50rem;
+        border-style: none;
+        display:flex;
+    }
+}
+
 .section3{
-    margin-top: 80px;
+    /* margin-top: 80px; */
     background-color: #eee;
     height: 30px;
     line-height: 30px;
     font-weight: bolder;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
 }
 .contact{
     margin-top: 60px;
+}
+.contact .form{
+position: relative;
+margin-left: 35%;
 }
 .contact h5{
     margin-bottom: 20px;
 }
 .contact p{
     margin-bottom: 25px;
+    
 }
 .info{
-    margin-top: 120px;
+    margin-top: 60px;
+    padding: 40px;
 }
 input{
     border-color: transparent transparent black;
 }
 footer{
 background-color: #eee;
-padding-right: 80px;
 }
 footer ul{
     list-style-type: none;
